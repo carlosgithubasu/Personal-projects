@@ -1,0 +1,345 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Efrequencydivider
+Z0 w1465442504
+Z1 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 dC:\Carlos Perez Araujo\Proyectos Personales\Quartus ii\Hardware_Based_Game
+Z5 8C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd
+Z6 FC:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd
+l0
+L6
+V23Z9LeGj[EYMB7ba3BG=K1
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1465449740.248000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd|
+Z10 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 YO2T2HNPHX]BJ6i_cAf^k0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 16 frequencydivider 0 22 23Z9LeGj[EYMB7ba3BG=K1
+l18
+L14
+V<ib@?o6SYAenKoQjW`_I83
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 b=>IcUmHLamekD]Fn<knP0
+!i10b 1
+Eram_memory
+Z13 w1466638630
+R3
+R2
+R1
+R4
+Z14 8C:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd
+Z15 FC:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd
+l0
+L9
+VlPK_TZ<_fzPCIakQa[eOj2
+R7
+32
+Z16 !s108 1466703868.890000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd|
+Z18 !s107 C:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd|
+R11
+R12
+!s100 >QRcjNUBJ__5bCM;ng4>h3
+!i10b 1
+Abehavioral
+R3
+R2
+R1
+Z19 DEx4 work 10 ram_memory 0 22 lPK_TZ<_fzPCIakQa[eOj2
+l23
+L16
+VRMJ7o`VEa3BlSQehI[;@O1
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 ;K:;HbA3Ib^aCa3z8Ijmd1
+!i10b 1
+Astructural
+R3
+R2
+R1
+R19
+l19
+L12
+VY4l4?1`I]g5]Coc>jTM<g3
+R7
+32
+R17
+R11
+R12
+w1466629689
+R18
+!s108 1466629836.537000
+!s100 3SlNP<TA3H>0[WJ1Go>lz0
+!i10b 1
+Erom_memory
+Z20 w1466703614
+R3
+R2
+R1
+R4
+Z21 8C:/Carlos Perez Araujo/Proyectos Personales/MIPS/ROM_MEMORY.vhd
+Z22 FC:/Carlos Perez Araujo/Proyectos Personales/MIPS/ROM_MEMORY.vhd
+l0
+L8
+VXdzFZU4ESINcN^>52IzDM0
+R7
+32
+Z23 !s108 1466703869.425000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/MIPS/ROM_MEMORY.vhd|
+Z25 !s107 C:/Carlos Perez Araujo/Proyectos Personales/MIPS/ROM_MEMORY.vhd|
+R11
+R12
+!s100 k2zMhVALaTeaGzYCW4;3G1
+!i10b 1
+Abehavioral
+R3
+R2
+R1
+DEx4 work 10 rom_memory 0 22 XdzFZU4ESINcN^>52IzDM0
+l21
+L13
+V_k00`>W;kUY`M2NimBhUa3
+!s100 <jBObF1eBSH[ig:5NP@WE0
+R7
+32
+R23
+R24
+R25
+R11
+R12
+!i10b 1
+Esyncronizador
+Z26 w1465442534
+Z27 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z28 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R2
+R1
+R4
+Z29 8C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd
+Z30 FC:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd
+l0
+L6
+Vb]W3ZD;iE]5[h<jMc4l`z1
+R7
+32
+Z31 !s108 1465449740.543000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd|
+Z33 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd|
+R11
+R12
+!s100 j9C`YA3UM`L^`;Gb`f?Nh1
+!i10b 1
+Abehavioral
+R27
+R28
+R2
+R1
+DEx4 work 13 syncronizador 0 22 b]W3ZD;iE]5[h<jMc4l`z1
+l44
+L18
+VzQ`0K_?_9D@EhIZ92j9Tb3
+R7
+32
+R31
+R32
+R33
+R11
+R12
+!s100 29Il12W<UW6Nzm66cYof83
+!i10b 1
+Etest_ram
+Z34 w1466638631
+R3
+R2
+R1
+R4
+Z35 8C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd
+Z36 FC:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd
+l0
+L6
+VOO82fiPHn;bO0zYHF8FeQ2
+R7
+32
+Z37 !s108 1466703869.168000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd|
+Z39 !s107 C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd|
+R11
+R12
+!s100 >WihdS>XlI`=>4>>F=j;=1
+!i10b 1
+Atest
+R3
+R2
+R1
+DEx4 work 8 test_ram 0 22 OO82fiPHn;bO0zYHF8FeQ2
+l24
+L9
+V>d;nfXgg;fhMGdmNQHbPa3
+R7
+32
+R37
+R38
+R39
+R11
+R12
+!s100 AG[Vi;HnX1ZPooljj5`5L2
+!i10b 1
+Etest_rom
+Z40 w1466703840
+R3
+R2
+R1
+R4
+Z41 8C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_ROM.vhd
+Z42 FC:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_ROM.vhd
+l0
+L6
+ViDR5K7:B@InSZW<Mc@?=B0
+!s100 YoX2Z`F@1OIf53IBJf`iS1
+R7
+32
+!i10b 1
+Z43 !s108 1466703869.657000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_ROM.vhd|
+Z45 !s107 C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_ROM.vhd|
+R11
+R12
+Atest
+R3
+R2
+R1
+DEx4 work 8 test_rom 0 22 iDR5K7:B@InSZW<Mc@?=B0
+l21
+L9
+V=>hf]Dfn80m`3iaXaf[mS1
+!s100 omJG>DXV7nJ<Fh]eXl:4C3
+R7
+32
+!i10b 1
+R43
+R44
+R45
+R11
+R12
+Etestbench
+Z46 w1465449164
+R2
+R1
+R4
+Z47 8C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd
+Z48 FC:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd
+l0
+L5
+V^`ong_dZh4klAIjG60dUf2
+R7
+32
+Z49 !s108 1465449740.842000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd|
+Z51 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd|
+R11
+R12
+!s100 ?AmnDaN>[`L0?JBMT0lTd2
+!i10b 1
+Abehavioral
+R2
+R1
+DEx4 work 9 testbench 0 22 ^`ong_dZh4klAIjG60dUf2
+l33
+L7
+Vm4YhSPD5Ek3L>cQaA7h4F1
+R7
+32
+R49
+R50
+R51
+R11
+R12
+!s100 N8ZdIZCTYa@M@A>8RcjSl0
+!i10b 1
+Etetris
+Z52 w1465449592
+R3
+Z53 DPx4 work 14 tetris_package 0 22 chG:4cb9nPX5[h4;XJoPR3
+R27
+R28
+R2
+R1
+R4
+Z54 8C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd
+Z55 FC:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd
+l0
+L9
+VEg?RNlTl3n:e14BDA1CB80
+R7
+32
+Z56 !s108 1465449741.152000
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd|
+Z58 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd|
+R11
+R12
+!s100 5O?38In10TfJZLHha_R?H2
+!i10b 1
+Abehavioral
+R3
+R53
+R27
+R28
+R2
+R1
+DEx4 work 6 tetris 0 22 Eg?RNlTl3n:e14BDA1CB80
+l62
+L21
+V4alnRz2AF]gK1U3dbFVJ@2
+R7
+32
+R56
+R57
+R58
+R11
+R12
+!s100 JTz7P80RjlDZ[DF0R`39O2
+!i10b 1
+Ptetris_package
+R1
+R2
+R3
+w1465448039
+R4
+8C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd
+FC:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd
+l0
+L9
+VchG:4cb9nPX5[h4;XJoPR3
+R7
+32
+R11
+R12
+!s100 higR]8eeb>b[bmM;FRFa@2
+!i10b 1
+!s108 1465449741.453000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd|
+!s107 C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd|

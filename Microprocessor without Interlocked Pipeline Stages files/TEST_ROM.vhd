@@ -1,0 +1,48 @@
+--Carlos Perez Araujo , Tecnologico de Estudios Superiores de Monterrey
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY TEST_ROM IS
+END TEST_ROM;
+
+ARCHITECTURE TEST OF TEST_ROM IS
+
+-- Component Declaration for the Unit Under Test (UUT)
+
+	COMPONENT ROM_MEMORY IS
+		PORT ( ADDRESS : IN STD_LOGIC_VECTOR ( 4 DOWNTO 0 );
+				 DATA : OUT STD_LOGIC_VECTOR ( 15 DOWNTO 0 ));
+	END COMPONENT;
+	
+   --Inputs
+	SIGNAL ADDRESS : STD_LOGIC_VECTOR(4 DOWNTO 0);
+   --Outputs
+	SIGNAL DATA : STD_LOGIC_VECTOR (15 DOWNTO 0);
+	
+BEGIN
+
+	-- Instantiate the Unit Under Test (UUT)
+	PORTMAP : ROM_MEMORY
+	PORT MAP(ADDRESS => ADDRESS, DATA => DATA );
+  -- Stimulus process
+STIMULUS: 
+PROCESS
+BEGIN
+	
+	-- hold reset state for 100 ns.
+	WAIT FOR 10 ns;
+	
+	ADDRESS <= "00000";
+	WAIT FOR 10 ns;
+	ADDRESS <= "00001";
+	WAIT FOR 10 ns;
+   ADDRESS <= "00010";
+	WAIT FOR 10 ns;
+   ADDRESS <= "00011";
+   WAIT FOR 10 ns;
+	ADDRESS <= "00100";
+	WAIT;
+
+END PROCESS;
+END TEST;

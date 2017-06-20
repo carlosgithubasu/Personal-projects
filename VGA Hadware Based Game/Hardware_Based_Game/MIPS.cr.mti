@@ -1,0 +1,19 @@
+{C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/MIPS/TEST_RAM.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TEST_RAM
+-- Compiling architecture TEST of TEST_RAM
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/MIPS/RAM_MEMORY.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RAM_MEMORY
+-- Compiling architecture BEHAVIORAL of RAM_MEMORY
+
+} {} {}}

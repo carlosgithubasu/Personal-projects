@@ -1,0 +1,511 @@
+Analysis & Synthesis report for VENDING_MACHINE_F
+Sat Jul 30 16:57:24 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE
+  9. State Machine - |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jul 30 16:57:24 2016           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; VENDING_MACHINE_F                               ;
+; Top-level Entity Name              ; VENDING_MACHINE_F                               ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 1,926                                           ;
+;     Total combinational functions  ; 1,917                                           ;
+;     Dedicated logic registers      ; 537                                             ;
+; Total registers                    ; 537                                             ;
+; Total pins                         ; 29                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; VENDING_MACHINE_F  ; VENDING_MACHINE_F  ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Type of Retiming Performed During Resynthesis                              ; Full               ;                    ;
+; Resynthesis Optimization Effort                                            ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                                   ; Normal             ;                    ;
+; Use Generated Physical Constraints File                                    ; On                 ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; CLK1KHZ.vhd                      ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/CLK1KHZ.vhd            ;         ;
+; KEYPAD.vhd                       ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/KEYPAD.vhd             ;         ;
+; LCD_EXAMPLE.vhd                  ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/LCD_EXAMPLE.vhd        ;         ;
+; lcd_controller.vhd               ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/lcd_controller.vhd     ;         ;
+; VENDING_ROM.vhd                  ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/VENDING_ROM.vhd        ;         ;
+; VENDING_MACHINE_F.vhd            ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/VENDING_MACHINE_F.vhd  ;         ;
+; CLK100HZ.vhd                     ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/CLK100HZ.vhd           ;         ;
+; DEBOUNCE.vhd                     ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/DEBOUNCE.vhd           ;         ;
+; DEBOUNCEDEVOLUTION.vhd           ; yes             ; User VHDL File  ; C:/Carlos Perez Araujo/Proyectos Personales/VENDING_MACHINE_FINAL/DEBOUNCEDEVOLUTION.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,926     ;
+;                                             ;           ;
+; Total combinational functions               ; 1917      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 951       ;
+;     -- 3 input functions                    ; 193       ;
+;     -- <=2 input functions                  ; 773       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1396      ;
+;     -- arithmetic mode                      ; 521       ;
+;                                             ;           ;
+; Total registers                             ; 537       ;
+;     -- Dedicated logic registers            ; 537       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 29        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 519       ;
+; Total fan-out                               ; 7662      ;
+; Average fan-out                             ; 3.05      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; |VENDING_MACHINE_F                     ; 1917 (0)          ; 537 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |VENDING_MACHINE_F                                                             ; work         ;
+;    |CLK100HZ:CLK100_HZ|                ; 34 (34)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|CLK100HZ:CLK100_HZ                                          ; work         ;
+;    |CLK1KHZ:COMPONENT_CLK1KHZ|         ; 50 (50)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|CLK1KHZ:COMPONENT_CLK1KHZ                                   ; work         ;
+;    |DEBOUNCE:DEBOUNCE1|                ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|DEBOUNCE:DEBOUNCE1                                          ; work         ;
+;    |DEBOUNCEDEVOLUTION:DEBOUNCEBUTTON| ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|DEBOUNCEDEVOLUTION:DEBOUNCEBUTTON                           ; work         ;
+;    |KEYPAD:COMPONENT_KEYPAD|           ; 35 (35)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|KEYPAD:COMPONENT_KEYPAD                                     ; work         ;
+;    |LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE| ; 1798 (1617)       ; 466 (419)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE                           ; work         ;
+;       |lcd_controller:CONTROLLER|      ; 181 (181)         ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++-----------------------------+-----------------+----------------+--------------------+----------------+----------------------+---------------------+--------------+---------------------+-----------------------------+---------------------+-----------------+---------------+---------------------+------------------------+------------------+------------------------+-----------------------+----------------------+---------------------+--------------------------+---------------------+--------------------------+---------------------+------------------+-----------------------+--------------------+--------------+
+; Name                        ; ROUTINE.WAITING ; ROUTINE.PRICES ; ROUTINE.SHOWPRICES ; ROUTINE.ESPERA ; ROUTINE.SHOW_MESSAGE ; ROUTINE.SHOWMESSAGE ; ROUTINE.SHOW ; ROUTINE.SETPOSITION ; ROUTINE.WAIT10SECONDS_STATE ; ROUTINE.RESET_STATE ; ROUTINE.DISPLAY ; ROUTINE.CLEAR ; ROUTINE.USELESSTATE ; ROUTINE.ANOTHERUSELESS ; ROUTINE.USELESS2 ; ROUTINE.SHOWDISPATCHED ; ROUTINE.WAITFORCHANGE ; ROUTINE.YOURCHANGEIS ; ROUTINE.DEV_MESSAGE ; ROUTINE.CALCULATE_CHANGE ; ROUTINE.CHANGE_EDIT ; ROUTINE.SUFFICIENT_MONEY ; ROUTINE.MONEY_STATE ; ROUTINE.PRODUCTS ; ROUTINE.CLEAR_DISPLAY ; ROUTINE.WAIT_STATE ; ROUTINE.IDLE ;
++-----------------------------+-----------------+----------------+--------------------+----------------+----------------------+---------------------+--------------+---------------------+-----------------------------+---------------------+-----------------+---------------+---------------------+------------------------+------------------+------------------------+-----------------------+----------------------+---------------------+--------------------------+---------------------+--------------------------+---------------------+------------------+-----------------------+--------------------+--------------+
+; ROUTINE.IDLE                ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 0            ;
+; ROUTINE.WAIT_STATE          ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 1                  ; 1            ;
+; ROUTINE.CLEAR_DISPLAY       ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 1                     ; 0                  ; 1            ;
+; ROUTINE.PRODUCTS            ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 1                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.MONEY_STATE         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 1                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SUFFICIENT_MONEY    ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 1                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.CHANGE_EDIT         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 1                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.CALCULATE_CHANGE    ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 1                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.DEV_MESSAGE         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 1                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.YOURCHANGEIS        ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 1                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.WAITFORCHANGE       ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 1                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SHOWDISPATCHED      ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 1                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.USELESS2            ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 1                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.ANOTHERUSELESS      ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 1                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.USELESSTATE         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 1                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.CLEAR               ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 1             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.DISPLAY             ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 1               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.RESET_STATE         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 1                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.WAIT10SECONDS_STATE ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 1                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SETPOSITION         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 1                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SHOW                ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 1            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SHOWMESSAGE         ; 0               ; 0              ; 0                  ; 0              ; 0                    ; 1                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SHOW_MESSAGE        ; 0               ; 0              ; 0                  ; 0              ; 1                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.ESPERA              ; 0               ; 0              ; 0                  ; 1              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.SHOWPRICES          ; 0               ; 0              ; 1                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.PRICES              ; 0               ; 1              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
+; ROUTINE.WAITING             ; 1               ; 0              ; 0                  ; 0              ; 0                    ; 0                   ; 0            ; 0                   ; 0                           ; 0                   ; 0               ; 0             ; 0                   ; 0                      ; 0                ; 0                      ; 0                     ; 0                    ; 0                   ; 0                        ; 0                   ; 0                        ; 0                   ; 0                ; 0                     ; 0                  ; 1            ;
++-----------------------------+-----------------+----------------+--------------------+----------------+----------------------+---------------------+--------------+---------------------+-----------------------------+---------------------+-----------------+---------------+---------------------+------------------------+------------------+------------------------+-----------------------+----------------------+---------------------+--------------------------+---------------------+--------------------------+---------------------+------------------+-----------------------+--------------------+--------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------+
+; State Machine - |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|state ;
++------------------+------------+-------------+------------------+-------------------------------------+
+; Name             ; state.send ; state.ready ; state.initialize ; state.power_up                      ;
++------------------+------------+-------------+------------------+-------------------------------------+
+; state.power_up   ; 0          ; 0           ; 0                ; 0                                   ;
+; state.initialize ; 0          ; 0           ; 1                ; 1                                   ;
+; state.ready      ; 0          ; 1           ; 0                ; 1                                   ;
+; state.send       ; 1          ; 0           ; 0                ; 1                                   ;
++------------------+------------+-------------+------------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                    ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                   ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][9]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][8]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][7]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][6]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][5]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][4]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][3]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][2]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][1]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][9]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][8]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][7]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][6]         ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][5]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[24][4]         ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][9]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][8]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][7]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][6]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][5]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][4]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][3]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][2]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][1]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][9]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][8]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][7]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][6]           ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][5]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][4]           ; Stuck at VCC due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CLEAR_BUTTON[1..9,11..31]    ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CLEAR_BUTTON[10]       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CLEAR_BUTTON[10]             ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.CALCULATE_CHANGE     ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.PRODUCTS             ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.SHOWMESSAGE          ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.SHOWPRICES           ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.USELESS2             ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.USELESSTATE          ; Merged with LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE.ANOTHERUSELESS       ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|LCD_BUS[8]                   ; Stuck at GND due to stuck port data_in                               ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|rw ; Stuck at GND due to stuck port data_in                               ;
+; Total Number of Removed Registers = 70                         ;                                                                      ;
++----------------------------------------------------------------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++--------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; Register name                                          ; Reason for Removal        ; Registers Removed due to This Register                         ;
++--------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGEMESSAGE[23][8] ; Stuck at GND              ; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|LCD_BUS[8],                  ;
+;                                                        ; due to stuck port data_in ; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|rw ;
++--------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 537   ;
+; Number of registers using Synchronous Clear  ; 188   ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 433   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Inverted Register Statistics                                               ;
++------------------------------------------------------------------+---------+
+; Inverted Register                                                ; Fan out ;
++------------------------------------------------------------------+---------+
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MONEY_FLAG                     ; 7       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|busy ; 10      ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|POSITION[5]                    ; 7       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|POSITION[0]                    ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|POSITION[2]                    ; 4       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[19][0]             ; 2       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SHOWMEMONEY[20][1]             ; 2       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_JUICE[1]                    ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_COOKIES[1]                  ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_WATER[1]                    ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_CHIPS[1]                    ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|KEY_PRINT                      ; 3       ;
+; LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|DEV_FLAG                       ; 7       ;
+; Total number of inverted registers = 13                          ;         ;
++------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MONEY_COUNTER[3]                       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |VENDING_MACHINE_F|KEYPAD:COMPONENT_KEYPAD|COL[0]                                           ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 31 LEs               ; 62 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_CHIPS[11]                           ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 31 LEs               ; 62 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_WATER[14]                           ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 31 LEs               ; 62 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_JUICE[25]                           ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 31 LEs               ; 62 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|AV_COOKIES[26]                         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CLEAR_BUTTON[10]                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|rw           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CURENT_MESSAGE[0]                      ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CONTADOR[15]                           ;
+; 14:1               ; 8 bits    ; 72 LEs        ; 56 LEs               ; 16 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|lcd_data[1]  ;
+; 14:1               ; 31 bits   ; 279 LEs       ; 31 LEs               ; 248 LEs                ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER|clk_count[6] ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHARP[4]                               ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|USERCHOICE[4]                          ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 4 LEs                ; 32 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|USERCHOICE[2]                          ;
+; 98:1               ; 3 bits    ; 195 LEs       ; 117 LEs              ; 78 LEs                 ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|LCD_BUS[3]                             ;
+; 49:1               ; 31 bits   ; 992 LEs       ; 62 LEs               ; 930 LEs                ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CHANGE[4]                              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|POSITION[2]                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|SEGS                                   ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|CONT                                   ;
+; 22:1               ; 12 bits   ; 168 LEs       ; 96 LEs               ; 72 LEs                 ; No         ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE                                ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 4 LEs                ; 26 LEs                 ; No         ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE                                ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |VENDING_MACHINE_F|LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|ROUTINE                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:12     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jul 30 16:57:09 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VENDING_MACHINE_F -c VENDING_MACHINE_F
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file clk1khz.vhd
+    Info (12022): Found design unit 1: CLK1KHZ-Behavioral
+    Info (12023): Found entity 1: CLK1KHZ
+Info (12021): Found 2 design units, including 1 entities, in source file keypad.vhd
+    Info (12022): Found design unit 1: KEYPAD-BEHAVIORAL
+    Info (12023): Found entity 1: KEYPAD
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_example.vhd
+    Info (12022): Found design unit 1: LCD_EXAMPLE-BEHAVIOR
+    Info (12023): Found entity 1: LCD_EXAMPLE
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_controller.vhd
+    Info (12022): Found design unit 1: lcd_controller-controller
+    Info (12023): Found entity 1: lcd_controller
+Info (12021): Found 1 design units, including 0 entities, in source file vending_rom.vhd
+    Info (12022): Found design unit 1: VENDING_ROM
+Info (12021): Found 2 design units, including 1 entities, in source file vending_machine_f.vhd
+    Info (12022): Found design unit 1: VENDING_MACHINE_F-STRUCTURAL
+    Info (12023): Found entity 1: VENDING_MACHINE_F
+Info (12021): Found 2 design units, including 1 entities, in source file clk100hz.vhd
+    Info (12022): Found design unit 1: CLK100HZ-Behavioral
+    Info (12023): Found entity 1: CLK100HZ
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: DEBOUNCE-Behavioral
+    Info (12023): Found entity 1: DEBOUNCE
+Info (12021): Found 2 design units, including 1 entities, in source file debouncedevolution.vhd
+    Info (12022): Found design unit 1: DEBOUNCEDEVOLUTION-Behavioral
+    Info (12023): Found entity 1: DEBOUNCEDEVOLUTION
+Info (12127): Elaborating entity "VENDING_MACHINE_F" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at VENDING_MACHINE_F.vhd(22): used implicit default value for signal "DEVOLUTIONLED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "LCD_EXAMPLE" for hierarchy "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE"
+Info (12128): Elaborating entity "lcd_controller" for hierarchy "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|lcd_controller:CONTROLLER"
+Info (12128): Elaborating entity "CLK1KHZ" for hierarchy "CLK1KHZ:COMPONENT_CLK1KHZ"
+Info (12128): Elaborating entity "KEYPAD" for hierarchy "KEYPAD:COMPONENT_KEYPAD"
+Info (12128): Elaborating entity "CLK100HZ" for hierarchy "CLK100HZ:CLK100_HZ"
+Info (12128): Elaborating entity "DEBOUNCE" for hierarchy "DEBOUNCE:DEBOUNCE1"
+Info (12128): Elaborating entity "DEBOUNCEDEVOLUTION" for hierarchy "DEBOUNCEDEVOLUTION:DEBOUNCEBUTTON"
+Info (276014): Found 13 instances of uninferred RAM logic
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MENSAJE_IDLE" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MENSAJE_IDLE1" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MENSAJE_IDLE2" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|MONEY_DEV" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|DISPATCHED" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|PRODUCTO4" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|INVALID" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|INSUFFICIENTMONEY" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|PRODUCTO3" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|PRODUCTO2" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|PRODUCTO1" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|NOPRODUCT" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "LCD_EXAMPLE:COMPONENT_LCD_EXAMPLE|LCD_LINE_1" is uninferred due to inappropriate RAM size
+Warning (113028): 10 out of 32 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 22 to 31 are not initialized
+Warning (113028): 10 out of 32 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 22 to 31 are not initialized
+Warning (113028): 10 out of 32 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 22 to 31 are not initialized
+Warning (113028): 30 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 34 to 63 are not initialized
+Warning (113028): 30 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 34 to 63 are not initialized
+Warning (113028): 30 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 34 to 63 are not initialized
+Warning (113028): 30 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 34 to 63 are not initialized
+Warning (113028): 30 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 34 to 63 are not initialized
+Warning (113028): 26 out of 64 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 38 to 63 are not initialized
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "RW" is stuck at GND
+    Warning (13410): Pin "DEVOLUTIONLED" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1959 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 1930 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 551 megabytes
+    Info: Processing ended: Sat Jul 30 16:57:24 2016
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
+
+

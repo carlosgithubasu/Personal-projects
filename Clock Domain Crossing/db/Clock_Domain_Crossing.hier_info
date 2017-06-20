@@ -1,0 +1,77 @@
+|Clock_Domain_Crossing
+rst => cdc_down:cdc_down_if:cdc_down_map.rst
+clk_GPU => cdc_down:cdc_down_if:cdc_down_map.clk_GPU
+clk_CPU => cdc_down:cdc_down_if:cdc_down_map.clk_CPU
+in_data_GPU_valid => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU_valid
+in_data_GPU[0] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[0]
+in_data_GPU[1] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[1]
+in_data_GPU[2] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[2]
+in_data_GPU[3] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[3]
+in_data_GPU[4] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[4]
+in_data_GPU[5] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[5]
+in_data_GPU[6] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[6]
+in_data_GPU[7] => cdc_down:cdc_down_if:cdc_down_map.in_data_GPU[7]
+out_data_CPU[0] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[0]
+out_data_CPU[1] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[1]
+out_data_CPU[2] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[2]
+out_data_CPU[3] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[3]
+out_data_CPU[4] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[4]
+out_data_CPU[5] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[5]
+out_data_CPU[6] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[6]
+out_data_CPU[7] <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU[7]
+out_data_CPU_valid <= cdc_down:cdc_down_if:cdc_down_map.out_data_CPU_valid
+
+
+|Clock_Domain_Crossing|cdc_down:\cdc_down_if:cdc_down_map
+rst => r_data_CPU[0].ACLR
+rst => r_data_CPU[1].ACLR
+rst => r_data_CPU[2].ACLR
+rst => r_data_CPU[3].ACLR
+rst => r_data_CPU[4].ACLR
+rst => r_data_CPU[5].ACLR
+rst => r_data_CPU[6].ACLR
+rst => r_data_CPU[7].ACLR
+rst => r_data_GPU[0].ACLR
+rst => r_data_GPU[1].ACLR
+rst => r_data_GPU[2].ACLR
+rst => r_data_GPU[3].ACLR
+rst => r_data_GPU[4].ACLR
+rst => r_data_GPU[5].ACLR
+rst => r_data_GPU[6].ACLR
+rst => r_data_GPU[7].ACLR
+clk_GPU => r_data_GPU[0].CLK
+clk_GPU => r_data_GPU[1].CLK
+clk_GPU => r_data_GPU[2].CLK
+clk_GPU => r_data_GPU[3].CLK
+clk_GPU => r_data_GPU[4].CLK
+clk_GPU => r_data_GPU[5].CLK
+clk_GPU => r_data_GPU[6].CLK
+clk_GPU => r_data_GPU[7].CLK
+clk_CPU => r_data_CPU[0].CLK
+clk_CPU => r_data_CPU[1].CLK
+clk_CPU => r_data_CPU[2].CLK
+clk_CPU => r_data_CPU[3].CLK
+clk_CPU => r_data_CPU[4].CLK
+clk_CPU => r_data_CPU[5].CLK
+clk_CPU => r_data_CPU[6].CLK
+clk_CPU => r_data_CPU[7].CLK
+in_data_GPU_valid => ~NO_FANOUT~
+in_data_GPU[0] => r_data_GPU[0].DATAIN
+in_data_GPU[1] => r_data_GPU[1].DATAIN
+in_data_GPU[2] => r_data_GPU[2].DATAIN
+in_data_GPU[3] => r_data_GPU[3].DATAIN
+in_data_GPU[4] => r_data_GPU[4].DATAIN
+in_data_GPU[5] => r_data_GPU[5].DATAIN
+in_data_GPU[6] => r_data_GPU[6].DATAIN
+in_data_GPU[7] => r_data_GPU[7].DATAIN
+out_data_CPU[0] <= r_data_CPU[0].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[1] <= r_data_CPU[1].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[2] <= r_data_CPU[2].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[3] <= r_data_CPU[3].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[4] <= r_data_CPU[4].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[5] <= r_data_CPU[5].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[6] <= r_data_CPU[6].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU[7] <= r_data_CPU[7].DB_MAX_OUTPUT_PORT_TYPE
+out_data_CPU_valid <= <GND>
+
+

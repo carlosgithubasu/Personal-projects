@@ -1,0 +1,239 @@
+
+-- FileName: lcd_example.vhd
+-- Design Software: Quartus II 32-bit Version 11.1 Build 173 SJ Full Version
+-- Carlos Pérez Araujo Instituto tecnologico de estudios superiores de monterrey
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE WORK.VENDING_ROM.ALL;
+
+
+ENTITY LCD_EXAMPLE IS     
+		PORT (
+				CLK : IN STD_LOGIC;  --clk
+				RW, RS, E : OUT STD_LOGIC;   --señales del lcd
+				LCD_DATA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);  --informacion al lcd
+				KEY : IN STD_LOGIC_VECTOR( 3 DOWNTO 0); --tecla en BCD
+				KEY_AVAILABLE : IN STD_LOGIC --Detecta si se ha presionado una tecla.
+	
+				);			
+END LCD_EXAMPLE;
+
+
+
+ARCHITECTURE BEHAVIOR OF  LCD_EXAMPLE IS
+	
+	
+COMPONENT LCD_CONTROLLER IS
+	PORT (
+		CLK : IN STD_LOGIC; 
+		RESET_N : IN STD_LOGIC; 
+		LCD_ENABLE : IN STD_LOGIC; 
+		LCD_BUS: IN STD_LOGIC_VECTOR(9 DOWNTO 0); 
+		BUSY : OUT STD_LOGIC; 
+		RW,RS,E: OUT STD_LOGIC; 
+		LCD_DATA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+END COMPONENT;
+
+   
+	
+SIGNAL LCD_ENABLE: STD_LOGIC := '0';
+SIGNAL LCD_BUS : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
+SIGNAL LCD_BUSY : STD_LOGIC := '0';
+   
+
+SIGNAL FLAG_TIMING : STD_LOGIC := '0';
+	
+----RUTINA------------------------------------------------------------------------------------
+TYPE ROUTINE_LCD IS (IDLE, WELCOME,CLEAR_SCREEN,WAIT_STATE,SHOW,WAIT_MORE,WAIT_ONESECOND,more ,CLEAR_DISPLAY, SETPOSITION, HOLD,PRICES,WAITING);
+SIGNAL ROUTINE : ROUTINE_LCD := SETPOSITION;
+--MENSAJES---------------------,--------------------------------------------------------------
+TYPE IDLESTATE IS ARRAY (0 TO 21) OF STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL MENSAJE_IDLE  : IDLESTATE := (C, A, R, L, O, S, SPACE, V, Es, N, D, I, N, G, SPACE, M, A, C, H, I, N, Es);
+SIGNAL MENSAJE_IDLE1 : IDLESTATE  := (H, Es, L, L, O, SPACE, T, H, Es, R, Es, COMA, W, Es, L, C, O, M, Es, EX, EX, EX);
+SIGNAL MENSAJE_IDLE2 : IDLESTATE  := (POS2, W, H, A, T, SPACE, A, R, Es, SPACE, Y, O, U, POS19, C, R, A, V, I, N, G, QUESTION);
+--POCISIONES---------------------------------------------------------------------------------
+TYPE LCD_LINES IS ARRAY (0 TO 37 ) OF STD_LOGIC_VECTOR (9 DOWNTO 0);
+SIGNAL LCD_LINE_1 : LCD_LINES := (POSD2, POSD3, POSD4, POSD5,  POSD6, POSD7, POSD8, POSD9, 
+											 POSDA, POSDB, POSDC, POSDD,  POSDE, POSDF, POSE0, POSE1, 
+											 POSE2, POSE3, POSE4, POSE5,  POSE6, POSE7, POS0,  POS1, 
+											 POS2,  POS3,  POS4,  POS5,   POS6,  POS7,  POS8,  POS9, 
+											 POS10, POS11, POS12, POS13, POS14,  POS15);
+   
+BEGIN		  
+
+
+CONTROLLER: LCD_CONTROLLER PORT MAP(
+			CLK => CLK,     --le mando el reloj de igual manera
+			RESET_N => '1', --reset en 1 siempre 
+			LCD_ENABLE => LCD_ENABLE,  --lcd_enable que tengo en mi main
+			LCD_BUS => LCD_BUS,  
+			BUSY => LCD_BUSY, 
+			RW => RW, 
+			RS => RS, 
+			E => E, 
+			LCD_DATA => LCD_DATA
+		  );
+ 
+	
+	
+	
+PROCESS (CLK)
+				VARIABLE CHAR : INTEGER RANGE 0 TO 37 := 0;           --MENSAJES SON DE ESTA LONGITUD
+				VARIABLE SEGS : INTEGER := 0;                         --VARIABLE PARA CONTAR LOS DELAYS
+				VARIABLE POSITION : INTEGER RANGE 37 DOWNTO 0 := 37;  --POCISION
+				VARIABLE FLAG_IDLE : INTEGER RANGE 0 TO 2 := 0;       --BANDERA PARA SABER QUE MENSAJE MOSTRAR
+				VARIABLE Contador : INTEGER := 0;
+
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+		
+		IF (LCD_BUSY = '0' AND LCD_ENABLE = '0') THEN
+			 LCD_ENABLE <= '1';
+			 
+			 
+		
+		
+				CASE ROUTINE IS
+
+						
+						WHEN IDLE =>      
+													
+												
+						
+												IF (FLAG_IDLE < 1) THEN 
+													IF(CHAR < MENSAJE_IDLE'LENGTH) THEN
+														LCD_BUS <= MENSAJE_IDLE(CHAR);
+														CHAR := CHAR + 1;
+													ELSE
+														LCD_ENABLE <= '0';
+														CHAR := 0;
+														ROUTINE <= WAIT_STATE;
+													END IF;
+												
+												ELSIF (FLAG_IDLE < 2) THEN 
+								 
+													IF (CHAR < MENSAJE_IDLE1'LENGTH) THEN
+														LCD_BUS <= MENSAJE_IDLE1 (CHAR);
+														CHAR := CHAR + 1;
+													ELSE
+														LCD_ENABLE <= '0';
+														CHAR := 0;
+														ROUTINE <= WAIT_STATE;
+													END IF;
+				
+												ELSE
+							 
+													IF (CHAR < MENSAJE_IDLE2'LENGTH) THEN  --MENSAJE NUMERO 3
+														LCD_BUS <= MENSAJE_IDLE2 (CHAR);
+														CHAR := CHAR + 1;
+													ELSE
+														LCD_ENABLE <= '0';
+														CHAR := 0;
+														ROUTINE <= WAIT_STATE;
+													END IF;
+							 
+											  END IF;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+				WHEN WAIT_STATE => 
+												LCD_ENABLE <= '0';
+												LCD_BUS <= NOTHING;
+												
+												IF(FLAG_IDLE = 2) THEN
+													LCD_ENABLE <= '0';
+													LCD_BUS <= NOTHING;
+														IF (SEGS > 250000000) THEN
+															LCD_BUS <= CLEAR;
+															ROUTINE <= IDLE;
+															FLAG_IDLE := 0;
+															SEGS := 0;
+														ELSE
+															SEGS := SEGS + 1;
+														END IF;	
+												ELSIF (FLAG_IDLE < 2) THEN
+														IF(SEGS < 8_500_000 ) THEN
+															 SEGS := SEGS + 1;
+														ELSE
+														SEGS := 0;
+															IF ( FLAG_TIMING = '0') THEN
+																FLAG_TIMING <= '1'; 
+																ROUTINE <= CLEAR_DISPLAY;
+															ELSE
+																FLAG_TIMING <= '0'; 
+																ROUTINE <= SETPOSITION;
+															END IF;
+												      END IF;
+											 END IF;
+											 
+											 
+											 
+				WHEN CLEAR_DISPLAY =>      LCD_BUS <= CLEAR;
+													ROUTINE <= WAIT_STATE;
+		 
+ 
+				
+				WHEN SETPOSITION =>     IF (POSITION > 0) THEN
+														LCD_BUS <= LCD_LINE_1(POSITION);
+														POSITION := POSITION - 1;
+											   ELSE
+														POSITION := 37;
+														FLAG_IDLE := FLAG_IDLE + 1;
+														LCD_BUS <= LCD_LINE_1(POSITION);
+											   END IF;
+						 
+											
+											   ROUTINE <= IDLE;
+						 
+	
+				
+				                          
+					
+				WHEN OTHERS =>   lcd_enable <= '0';
+			END CASE;
+			
+		ELSE LCD_ENABLE <= '0';
+ 
+		END IF;
+	END IF;
+END PROCESS;
+ 
+END BEHAVIOR;
+
+
+
+
+                           
+
+										
+										
+
+
+--WHEN PRICES =>    CASE KEY IS
+--													 when "0000"=> LCD_BUS <= ZERO;
+--													 when "0001"=> LCD_BUS <= ONE;
+--													 when "0010"=> LCD_BUS <= TWO;
+--													 when "0011"=> LCD_BUS <= THREE;
+--													 when "0100"=> LCD_BUS <= FOUR;
+--													 when "0101"=> LCD_BUS <= FIVE;
+--													 when "0110"=> LCD_BUS <= SIX;
+--													 when "0111"=> LCD_BUS <= SEVEN;
+--													 when "1000"=> LCD_BUS <= EIGHT;
+--													 when "1001"=> LCD_BUS <= NINE;
+--													 when "1010"=> LCD_BUS <= A;
+--													 when "1011"=> LCD_BUS <= B;
+--													 when "1100"=> LCD_BUS <= C;
+--													 when "1101"=> LCD_BUS <= D;
+--													 WHEN OTHERS => LCD_BUS <= NOTHING;
+--												END CASE;
+--									  ROUTINE <= WAIT_ONESECOND;
+					 

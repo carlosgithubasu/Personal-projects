@@ -1,0 +1,19 @@
+--Carlos Perez Araujo , Tecnologico de Estudios Superiores de Monterrey
+--DONE
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY SHIFT_L32 IS 
+PORT( A : IN STD_LOGIC_VECTOR ( 31 DOWNTO 0);
+		B : OUT STD_LOGIC_VECTOR ( 31 DOWNTO 0));  
+    
+END SHIFT_L32;
+
+ARCHITECTURE EQUATIONS OF SHIFT_L32 IS
+BEGIN
+		B  <=   A(29 DOWNTO 0) & "00";
+END EQUATIONS;
+
+
+
+   

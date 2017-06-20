@@ -1,0 +1,127 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY KEYPAD IS
+	PORT (
+		CLK : IN STD_LOGIC;
+		ROW : IN STD_LOGIC_VECTOR(0 TO 3);
+		COL : OUT STD_LOGIC_VECTOR(0 TO 3);
+	   KEY : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	   KEY_AVAILABLE : OUT STD_LOGIC
+	);
+END KEYPAD;
+
+ARCHITECTURE Behavioral OF KEYPAD IS
+	
+SIGNAL STATE : STD_LOGIC_VECTOR(2 DOWNTO 0) := "000";  
+	 
+BEGIN
+	
+	
+
+	PROCESS (CLK) IS
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			CASE STATE IS
+				WHEN "000" => 
+					COL <= "1000";  --columna 1
+			    	STATE <= "001";
+				
+				WHEN "001" =>
+					
+					IF ROW = "1000" THEN   --fila  1
+						
+						KEY <= "0001";
+						KEY_AVAILABLE<= '1';
+						
+						
+					ELSIF ROW = "0100" THEN  --fila 2
+						KEY <= "0100";
+						KEY_AVAILABLE<= '1';
+						
+					ELSIF ROW = "0010" THEN  --fila 3
+						KEY <= "0111";
+						KEY_AVAILABLE<= '1';
+						
+					ELSIF ROW = "0001" THEN  --fila 4
+						KEY <= "1111"; 
+						KEY_AVAILABLE<= '1';
+						
+					ELSE KEY_AVAILABLE <= '0'; 
+				         	
+					END IF;
+					
+					STATE <= "010";
+				
+				WHEN "010" =>
+					COL <= "0100";  --columna 2
+					STATE <= "011";
+				WHEN "011" =>
+					IF ROW = "1000" THEN
+						
+						KEY <= "0010";
+						KEY_AVAILABLE<= '1'; 
+						
+					ELSIF ROW = "0100" THEN
+						
+						KEY <= "0101";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0010" THEN
+						
+						KEY <= "1000";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0001" THEN
+						
+						KEY <= "0000";
+						KEY_AVAILABLE<= '1';
+						
+					ELSE KEY_AVAILABLE <= '0';  
+					
+					END IF;	
+					
+					STATE <= "100";
+				
+				
+				WHEN "100" =>
+					COL <= "0010";
+					STATE <= "101";
+				WHEN "101" =>
+					IF ROW = "1000" THEN
+						KEY <= "0011";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0100" THEN
+						KEY <= "0110";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0010" THEN
+						KEY <= "1001";
+					   KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0001" THEN
+						KEY <= "1111";
+						KEY_AVAILABLE<= '1';		
+					ELSE KEY_AVAILABLE <= '0';  
+					END IF;					
+					STATE <= "110";
+				WHEN "110" =>
+					COL <= "0001";
+					STATE <= "111";
+				WHEN OTHERS =>
+					IF ROW = "1000" THEN
+						KEY <= "1010";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0100" THEN
+						KEY <= "1011";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0010" THEN
+						KEY <= "1100";
+						KEY_AVAILABLE<= '1';
+					ELSIF ROW = "0001" THEN
+						KEY <= "1101";
+						KEY_AVAILABLE<= '1';
+				   ELSE KEY_AVAILABLE <= '0'; 
+					END IF;					
+					STATE <= "000";
+			END CASE;
+		END IF;
+	END PROCESS;
+END Behavioral;

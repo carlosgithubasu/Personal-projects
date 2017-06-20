@@ -1,0 +1,35 @@
+
+--CARLOS PEREZ ARAUJO,DIGITAL SYSTEMS BACHELOR STUDENT AT ITESM MONTERREY
+--JK FF, 6.15.2016
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY FF_JK IS
+PORT( J, K , SN , RN CLK : in bit;
+      Q , QN : out bit);
+		
+
+END FF_JK;
+
+ARCHITECTURE behavioral of  FF_JK IS
+
+signal qint :  bit;
+
+BEGIN 
+
+QN <= not qint;
+Q<= qint;
+
+process(clk)
+begin
+
+if SN = '0' then Q<= '1'; after 8 ns;
+elsif RN ='1' then Q<='0' after 8 ns;
+elsif CLK'EVENT AND CLK='1' then
+Q <= (J and (not Qint))  or (not K and Qint);
+end if;
+end process;
+
+end behavioral;

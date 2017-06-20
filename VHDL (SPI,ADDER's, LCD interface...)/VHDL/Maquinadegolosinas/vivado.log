@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Sat Jun 25 18:30:22 2016
+# Process ID: 4472
+# Current directory: C:/Carlos Perez Araujo/Proyectos Personales/VHDL/VHDL/Maquinadegolosinas
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8620 C:\Carlos Perez Araujo\Proyectos Personales\VHDL\VHDL\Maquinadegolosinas\Maquinadegolosinas.xpr
+# Log file: C:/Carlos Perez Araujo/Proyectos Personales/VHDL/VHDL/Maquinadegolosinas/vivado.log
+# Journal file: C:/Carlos Perez Araujo/Proyectos Personales/VHDL/VHDL/Maquinadegolosinas\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Carlos Perez Araujo/Proyectos Personales/VHDL/VHDL/Maquinadegolosinas/Maquinadegolosinas.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/Xilinx/Maquinadegolosinas' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 729.711 ; gain = 118.332
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 25 18:32:15 2016...

@@ -1,0 +1,21 @@
+--Carlos Perez Araujo , Tecnologico de Estudios Superiores de Monterrey
+--DONE
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+
+ENTITY SHIFT_L IS 
+PORT( A : IN STD_LOGIC_VECTOR ( 25 DOWNTO 0);  --26 WIDTH
+		B : OUT STD_LOGIC_VECTOR ( 27 DOWNTO 0));--28 WIDTH
+    
+END SHIFT_L;
+
+ARCHITECTURE EQUATIONS OF SHIFT_L IS
+
+BEGIN
+		B  <=   A  & "00";	
+END EQUATIONS;
+
+
+
+   

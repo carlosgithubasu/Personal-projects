@@ -1,0 +1,48 @@
+{C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TestBench
+-- Compiling architecture BEHAVIORAL of TestBench
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/FrequencyDivider.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FrequencyDivider
+-- Compiling architecture BEHAVIORAL of FrequencyDivider
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Syncronizador.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Syncronizador
+-- Compiling architecture BEHAVIORAL of Syncronizador
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/tetris_package.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package tetris_package
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Quartus ii/Hardware_Based_Game/Tetris.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package tetris_package
+-- Compiling entity Tetris
+-- Compiling architecture BEHAVIORAL of Tetris
+
+} {} {}}

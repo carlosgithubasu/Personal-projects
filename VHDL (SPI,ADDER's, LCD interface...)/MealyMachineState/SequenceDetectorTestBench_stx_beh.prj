@@ -1,0 +1,2 @@
+vhdl isim_temp "SequenceDetector.vhd"
+vhdl isim_temp "SequenceDetectorTestBench.vhd"

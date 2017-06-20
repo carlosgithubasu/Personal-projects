@@ -1,0 +1,18 @@
+{C:/Carlos Perez Araujo/Proyectos Personales/Piano/TESTBENCH.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Piano/TESTBENCH.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TestBench
+-- Compiling architecture BEHAVIORAL of TestBench
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Piano/FrequencyDivider.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Piano/FrequencyDivider.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FrequencyDivider
+-- Compiling architecture BEHAVIORAL of FrequencyDivider
+
+} {} {}}

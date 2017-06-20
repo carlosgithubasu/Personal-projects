@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetector_isim_beh.exe" -prj "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetector_beh.prj" "work.SequenceDetector" 

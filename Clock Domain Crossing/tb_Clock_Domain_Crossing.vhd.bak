@@ -1,0 +1,91 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+ 
+entity tb_Clock_Domain_Crossing is
+end tb_Clock_Domain_Crossing;
+ 
+architecture Behavioral of tb_Clock_Domain_Crossing is
+ 
+    component Clock_Domain_Crossing 
+    Generic(
+        CLK_COMPARE : integer range 0 to 1 := 0; --if in_clk_1 > in_clk_2; 0 else 1;
+        DATA_WIDTH : integer := 8
+ 
+    );
+    Port ( 
+        in_rst : in std_logic;
+        in_clk_A : in std_logic;
+        in_clk_B : in std_logic;
+        in_data_A_vld : in std_logic;
+        in_data_A : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+        out_data_B : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+        out_data_B_vld : out std_logic       
+    );
+    end component;
+ 
+    constant DATA_WIDTH : integer := 8;
+ --   constant PERIOD_CLK_A :time := 10 us;
+ --   constant PERIOD_CLK_B :time := 1 us;
+	 constant PERIOD_CLK_A :time := 2 us;
+    constant PERIOD_CLK_B :time := 10 us; 
+    signal in_clk_A : std_logic := '0';
+    signal in_clk_B : std_logic := '0';
+    signal in_data_A_vld : std_logic := '0';
+    signal in_data_A : std_logic_vector(DATA_WIDTH - 1 downto 0) := (others => '0');
+    signal out_data_B : std_logic_vector(DATA_WIDTH - 1 downto 0) := (others => '0');
+    signal out_data_B_vld : std_logic := '0';
+ 
+begin
+    process
+    begin
+        in_clk_A <= '1';
+        wait for PERIOD_CLK_A / 2;
+        in_clk_A <= '0';
+        wait for PERIOD_CLK_A / 2;
+    end process;
+ 
+    process
+    begin
+        in_clk_B <= '1';
+        wait for PERIOD_CLK_B / 2;
+        in_clk_B <= '0';
+        wait for PERIOD_CLK_B / 2;
+    end process;
+ 
+    process
+    begin
+--        in_data_A_vld <= '0';
+--        wait for PERIOD_CLK_A * 19;
+--        in_data_A_vld <= '1';
+--        wait for PERIOD_CLK_A;
+		   in_data_A_vld <= '0';
+         wait for PERIOD_CLK_A * 10;
+         in_data_A_vld <= '1';
+         wait for PERIOD_CLK_A;
+    end process;
+ 
+    process(in_data_A_vld)
+    begin
+        if in_data_A_vld = '1' then
+            in_data_A <= in_data_A + 1;
+        end if;
+    end process;
+ 
+ 
+    clk_bridge_map : Clock_Domain_Crossing
+    Generic map(
+        CLK_COMPARE => 0, --f_clk_a <= f_clk_b
+        DATA_WIDTH => DATA_WIDTH   
+    )
+    Port map( 
+        in_rst => '0',
+        in_clk_A => in_clk_A,
+        in_clk_B => in_clk_B,
+        in_data_A_vld => in_data_A_vld,
+        in_data_A => in_data_A,
+        out_data_B => out_data_B,
+        out_data_B_vld => out_data_B_vld
+    );
+ 
+end Behavioral;

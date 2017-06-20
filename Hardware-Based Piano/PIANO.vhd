@@ -1,0 +1,101 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+
+
+ENTITY PIANO IS PORT (
+		CLK, RST  : IN STD_LOGIC; 
+		HSYNC, VSYNC    : OUT STD_LOGIC; 
+		R, G, B         : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		
+	);
+
+	END PIANO;
+
+	
+ARCHITECTURE BEHAVIORAL OF PIANO IS
+
+	COMPONENT SYNCRONIZADOR     
+		PORT (
+		CLK_25MHZ    : IN STD_LOGIC;
+		RST	  : IN STD_LOGIC;
+		H_SYNC, V_SYNC, VIDEO_ON  : OUT STD_LOGIC;
+		HCOUNT, VCOUNT            : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	
+	);
+	END COMPONENT;
+	
+	
+	COMPONENT FREQUENCYDIVIDER 
+		PORT (
+			CLK_IN, RST  : IN STD_LOGIC; 
+			CLK_OUT      : OUT STD_LOGIC 
+		);
+	END COMPONENT;
+	
+	SIGNAL HCOUNT : STD_LOGIC_VECTOR (9 DOWNTO 0) := "0000000000";
+	SIGNAL VCOUNT : STD_LOGIC_VECTOR(9 DOWNTO 0)  := "0000000000";
+	SIGNAL V_SYNC : STD_LOGIC := '0'; 
+	SIGNAL H_SYNC : STD_LOGIC := '0'; 
+	SIGNAL VIDEO_ON : STD_LOGIC := '0';
+	SIGNAL CLOCK : STD_LOGIC := '0';
+	
+	
+	
+	
+	
+	BEGIN
+
+	CLOCK25MHZ : FREQUENCYDIVIDER
+	PORT MAP(CLK, RST, CLOCK);
+	
+	VGA_SYNCRONIZADOR : SYNCRONIZADOR
+	PORT MAP(CLOCK, RST, H_SYNC, V_SYNC, VIDEO_ON, HCOUNT, VCOUNT); 
+	
+	VSYNC <= V_SYNC;
+	HSYNC <= H_SYNC;  
+			
+	PROCESS(ClOCK)
+	BEGIN
+	IF RISING_EDGE(CLOCK) THEN
+	
+	
+														
+			IF (HCOUNT >100 AND HCOUNT<200) AND  (VCOUNT > 300 AND VCOUNT < 480) THEN
+			    R <= (OTHERS => '1'); G <= (OTHERS => '1'); B <= (OTHERS => '1');
+				
+--				ELSIF (HCOUNT > 160 AND HCOUNT < 240 ) THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--						  
+--			
+--				ELSIF(HCOUNT > 240 AND HCOUNT < 320) THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--						 
+--				ELSIF(HCOUNT > 320 AND HCOUNT < 400)  THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--						  
+--			
+--			
+--				ELSIF(HCOUNT > 400 AND HCOUNT < 480) THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--				
+--				ELSIF(HCOUNT > 480 AND HCOUNT < 560) THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--						 
+--				ELSIF(HCOUNT > 560 AND HCOUNT < 640) THEN
+--						  R <= (OTHERS => '1'); G <= (OTHERS => '0'); B <= (OTHERS => '1');
+--						 
+--				ELSE 
+--						 R <= (OTHERS => '0'); G <= (OTHERS => '0'); B <= (OTHERS => '0');
+--					
+			
+			ELSE 
+			 R <= (OTHERS => '0'); G <= (OTHERS => '0'); B <= (OTHERS => '0');
+			 END IF;
+		END IF;
+	END PROCESS;
+	
+END ARCHITECTURE;

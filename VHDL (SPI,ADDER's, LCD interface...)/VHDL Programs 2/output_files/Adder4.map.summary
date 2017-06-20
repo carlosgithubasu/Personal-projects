@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Tue Jun 21 21:34:10 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Adder4
+Top-level Entity Name : Adder4
+Family : Cyclone IV GX
+Total logic elements : 6
+    Total combinational functions : 6
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

@@ -1,0 +1,35 @@
+{C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/cdc_down.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/cdc_down.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cdc_down
+-- Compiling architecture Behavioral of cdc_down
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/cdc_up.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/cdc_up.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cdc_up
+-- Compiling architecture Behavioral of cdc_up
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/Clock_Domain_Crossing.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/Clock_Domain_Crossing.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Clock_Domain_Crossing
+-- Compiling architecture Behavioral of Clock_Domain_Crossing
+
+} {} {}} {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/tb_Clock_Domain_Crossing.vhd} {1 {vcom -work work -2002 -explicit {C:/Carlos Perez Araujo/Proyectos Personales/Clock_Domain_Crossing/tb_Clock_Domain_Crossing.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_Clock_Domain_Crossing
+-- Compiling architecture Behavioral of tb_Clock_Domain_Crossing
+
+} {} {}}

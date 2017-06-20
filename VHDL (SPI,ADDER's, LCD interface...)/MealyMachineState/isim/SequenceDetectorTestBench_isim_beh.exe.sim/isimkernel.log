@@ -1,0 +1,10 @@
+Command line:
+   SequenceDetectorTestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62107
+
+Thu Apr 28 15:55:40 2016
+
+
+ Elaboration Time: 0.046875 sec

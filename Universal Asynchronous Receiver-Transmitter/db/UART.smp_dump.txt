@@ -1,0 +1,13 @@
+
+State Machine - |UART_Top_entity|UART_Receiver:receiver|state
+Name state.done_state state.read_bits_state state.read_start_bit_state state.init_state 
+state.init_state 0 0 0 0 
+state.read_start_bit_state 0 0 1 1 
+state.read_bits_state 0 1 0 1 
+state.done_state 1 0 0 1 
+
+State Machine - |UART_Top_entity|UART_Transmitter:transmitter|state
+Name state.shift state.load state.init 
+state.init 0 0 0 
+state.load 0 1 1 
+state.shift 1 0 1 

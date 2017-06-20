@@ -1,0 +1,153 @@
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+
+ENTITY PIANO_SPEAKER IS 
+
+     PORT ( CLK: IN STD_LOGIC;
+	         DO : IN STD_LOGIC;
+	         RE : IN STD_LOGIC;
+				MI : IN STD_LOGIC;
+				FA:  IN STD_LOGIC;
+				SOL: IN STD_LOGIC;
+				LA:  IN STD_LOGIC;
+				SI:  IN STD_LOGIC;
+				DOB: IN STD_LOGIC;
+				SPEK : OUT STD_LOGIC
+				
+		  );	  
+   
+END PIANO_SPEAKER;
+
+ARCHITECTURE BEHAVIORAL OF PIANO_SPEAKER IS
+ 
+ 
+ 
+ SIGNAL CLK_440HZ: STD_LOGIC:= '0';  --DO 440
+ SIGNAL CLK_494HZ: STD_LOGIC:= '0';  --RE 494
+ SIGNAL CLK_523HZ: STD_LOGIC:= '0';  --MI 523
+ SIGNAL CLK_587HZ: STD_LOGIC:= '0';  --FA 587
+ SIGNAL CLK_659HZ: STD_LOGIC:= '0';  --SOL 659
+ SIGNAL CLK_698HZ: STD_LOGIC:= '0';  --LA 698
+ SIGNAL CLK_784HZ: STD_LOGIC:= '0';  --SI 784
+ SIGNAL CLK_800HZ: STD_LOGIC:= '0';  --SI 784
+  
+ BEGIN
+
+  
+        
+PROCESS(CLK, DO,RE, MI,FA,SOL,LA,SI,DOB) --PROCESS TO CONVERT 8MHZ FREQ TO 440HZ.
+ 
+ 
+ VARIABLE COUNTER440: INTEGER:= 0;
+ VARIABLE COUNTER494: INTEGER:= 0;
+ VARIABLE COUNTER523: INTEGER:= 0;
+ VARIABLE COUNTER587: INTEGER:= 0;
+ VARIABLE COUNTER659: INTEGER:= 0;
+ VARIABLE COUNTER698: INTEGER:= 0;
+ VARIABLE COUNTER784: INTEGER:= 0;
+ VARIABLE COUNTER800: INTEGER:= 0;
+ 
+BEGIN
+        IF RISING_EDGE(CLK) THEN
+		  
+		  
+            IF COUNTER440 < 113636 THEN --8MHZ/18181 = 440HZ
+                COUNTER440 := COUNTER440 + 1;
+            ELSE
+                CLK_440HZ <= NOT CLK_440HZ;
+                COUNTER440 := 0;
+            END IF;
+        
+ 
+            IF COUNTER494 < 101214 THEN --8MHZ/16193 = 494HZ
+                COUNTER494 := COUNTER494 + 1;
+            ELSE
+                CLK_494HZ <= NOT CLK_494HZ;
+                COUNTER494 := 0;
+            END IF;
+				
+				IF COUNTER523 < 95602 THEN --8MHZ/16193 = 523HZ
+                COUNTER523 := COUNTER523 + 1;
+            ELSE
+                CLK_523HZ <= NOT CLK_523HZ;
+                COUNTER523 := 0;
+            END IF;
+				
+				IF COUNTER587 < 85178 THEN --8MHZ/16193 = 587HZ
+                COUNTER587 := COUNTER587 + 1;
+            ELSE
+                CLK_587HZ <= NOT CLK_587HZ;
+                COUNTER587 := 0;
+            END IF;
+				
+				IF COUNTER659 < 75872 THEN --8MHZ/16193 = 659HZ
+                COUNTER659 := COUNTER659 + 1;
+            ELSE
+                CLK_659HZ <= NOT CLK_659HZ;
+                COUNTER659 := 0;
+            END IF;
+				
+				IF COUNTER698 < 71633 THEN --8MHZ/16193 = 698HZ
+                COUNTER698 := COUNTER698 + 1;
+            ELSE
+                CLK_698HZ <= NOT CLK_698HZ;
+                COUNTER698 := 0;
+            END IF;
+				
+				IF COUNTER784 < 63775 THEN --8MHZ/16193 = 784HZ
+                COUNTER784 := COUNTER784 + 1;
+            ELSE
+                CLK_784HZ <= NOT CLK_784HZ;
+                COUNTER784 := 0;
+            END IF;
+				
+				IF COUNTER800 < 62500 THEN --8MHZ/16193 = 784HZ
+                COUNTER800 := COUNTER800 + 1;
+            ELSE
+                CLK_800HZ <= NOT CLK_800HZ;
+                COUNTER800 := 0;
+            END IF;
+				
+      
+				IF (DO= '0') THEN
+				 SPEK <= CLK_440HZ; -- SPEAKER GETS I/P WAVE OF 440HZ.
+				
+				
+				
+				ELSIF (RE = '0') THEN
+				 SPEK <= CLK_494HZ; -- SPEAKER GETS I/P WAVE OF 494HZ.
+				 
+				
+						 
+				ELSIF (MI= '0') THEN
+				 SPEK <= CLK_523HZ; -- SPEAKER GETS I/P WAVE OF 440HZ.
+				
+				
+				ELSIF (FA = '1') THEN
+				 SPEK <= CLK_587HZ; -- SPEAKER GETS I/P WAVE OF 494HZ.
+				
+						 
+				ELSIF (SOL = '1') THEN
+				 SPEK <= CLK_659HZ; -- SPEAKER GETS I/P WAVE OF 440HZ.
+				
+				ELSIF (LA = '1') THEN
+				 SPEK <= CLK_698HZ; -- SPEAKER GETS I/P WAVE OF 494HZ.
+				
+					
+				ELSIF (SI = '1') THEN
+				 SPEK <= CLK_784HZ; -- SPEAKER GETS I/P WAVE OF 494HZ.
+				
+				ELSIF (DOB = '1') THEN
+				 SPEK <= CLK_800HZ; -- SPEAKER GETS I/P WAVE OF 494HZ.
+				 
+				ELSE 
+				 SPEK <= '0';
+			END IF;
+	
+	 END IF;
+END PROCESS;
+END BEHAVIORAL;
+	

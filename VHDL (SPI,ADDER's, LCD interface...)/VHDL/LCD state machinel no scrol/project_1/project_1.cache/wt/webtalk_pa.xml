@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Sat May 21 09:59:13 2016">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="55f7bba4ecae46d3a12466a672d16fa0" type="ProjectID"/>
+<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="6" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="LCD.vhd, 122, 192" value="1" type="GuiResourceData"/>
+<property name="LCD.vhd, 122, 332" value="1" type="GuiResourceData"/>
+<property name="LCD.vhd, 247, 69" value="1" type="GuiResourceData"/>
+<property name="LCD.vhd, 28, 242" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 0, 176" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 0, 348" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 1, 91" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 103, 145" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 109, 296" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 135, 220" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 141, 170" value="2" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 141, 170, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 17, 190" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 170, 147" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 18, 113" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 181, 214" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 182, 131" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 19, 197" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 22, 266" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 22, 38" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 232, 309" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 25, 150" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 25, 152" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 25, 158" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 25, 179" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 25, 187" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 26, 182" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 26, 192" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 27, 263" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 28, 112" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 28, 227" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 29, 159" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 29, 172" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 29, 174" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 29, 97" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 302, 184" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 31, 212" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 318, 240" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 319, 128" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 333, 349" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 342, 197" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 355, 179" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 394, 266" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 395, 129" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 404, 254" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 407, 128" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 448, 112" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 458, 168" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 470, 123" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 474, 174" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 475, 176" value="2" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 478, 252" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 485, 257" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 50, 300" value="1" type="GuiResourceData"/>
+<property name="Maquinadegolosinas.vhd, 9, 127" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LCD - Behavioral (LCD.vhd" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="14" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_PROJECT_SUMMARY, Project Summary" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="3" type="GuiResourceData"/>
+<property name="RDIResourceCommand.RDICommands_LINE_COMMENT, (String" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="15" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="11" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

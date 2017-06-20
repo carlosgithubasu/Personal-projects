@@ -1,0 +1,7 @@
+
+State Machine - |VGA|tetris
+Name tetris.HOLD tetris.FIGURE tetris.drawBoard1 tetris.drawBoard0 
+tetris.drawBoard0 0 0 0 0 
+tetris.drawBoard1 0 0 1 1 
+tetris.FIGURE 0 1 0 1 
+tetris.HOLD 1 0 0 1 

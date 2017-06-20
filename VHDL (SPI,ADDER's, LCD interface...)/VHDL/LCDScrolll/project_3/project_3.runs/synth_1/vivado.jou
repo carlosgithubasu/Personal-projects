@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Sat May 21 12:56:30 2016
+# Process ID: 9872
+# Current directory: C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/Xilinx/LCDScrolll/project_3/project_3.runs/synth_1
+# Command line: vivado.exe -log LCD.vds -mode batch -messageDb vivado.pb -notrace -source LCD.tcl
+# Log file: C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/Xilinx/LCDScrolll/project_3/project_3.runs/synth_1/LCD.vds
+# Journal file: C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/Xilinx/LCDScrolll/project_3/project_3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source LCD.tcl -notrace

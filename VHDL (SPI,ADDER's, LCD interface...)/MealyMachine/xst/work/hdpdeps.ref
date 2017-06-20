@@ -1,0 +1,9 @@
+V3 4
+FL "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetectod.vhd" 2016/04/28.15:06:29 P.20131013
+FL "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetector.vhd" 2016/04/28.15:26:57 P.20131013
+EN work/SequenceDetector 1461875221 \
+      FL "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetector.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/SequenceDetector/Behavioral 1461875222 \
+      FL "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetector.vhd" \
+      EN work/SequenceDetector 1461875221

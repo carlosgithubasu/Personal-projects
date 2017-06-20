@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetectod.xst" -ofn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachine/SequenceDetectod.syr" 

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'UART_Transmitter:transmitter|done_shifting'
+Slack : -2.921
+TNS   : -2.921
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.887
+TNS   : -129.035
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.190
+TNS   : -0.422
+
+Type  : Slow 1200mV 85C Model Hold 'UART_Transmitter:transmitter|done_shifting'
+Slack : 2.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -94.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_Transmitter:transmitter|done_shifting'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'UART_Transmitter:transmitter|done_shifting'
+Slack : -2.652
+TNS   : -2.652
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.605
+TNS   : -108.024
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.202
+TNS   : -0.441
+
+Type  : Slow 1200mV 0C Model Hold 'UART_Transmitter:transmitter|done_shifting'
+Slack : 2.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -94.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_Transmitter:transmitter|done_shifting'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'UART_Transmitter:transmitter|done_shifting'
+Slack : -1.496
+TNS   : -1.496
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.593
+TNS   : -33.887
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.190
+TNS   : -0.510
+
+Type  : Fast 1200mV 0C Model Hold 'UART_Transmitter:transmitter|done_shifting'
+Slack : 1.600
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -99.832
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_Transmitter:transmitter|done_shifting'
+Slack : 0.396
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,171 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Carlos Perez Araujo\Proyectos Personales\Quartus ii\Hardware_Based_Game
+Elcd_controller
+Z1 w1467080351
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Carlos Perez Araujo\Proyectos Personales\Quartus ii\Hardware_Based_Game
+Z5 8C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_controller.vhd
+Z6 FC:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_controller.vhd
+l0
+L6
+VELfkK?DlBAIT@Zg5E[ZzL2
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1467162168.986000
+Z9 !s90 -reportprogress|300|-work|work_vending|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_controller.vhd|
+Z10 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_controller.vhd|
+Z11 o-work work_vending -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 M1RMJ30ED>ETcE>hGNead2
+!i10b 1
+Acontroller
+R2
+R3
+DEx4 work 14 lcd_controller 0 22 ELfkK?DlBAIT@Zg5E[ZzL2
+l21
+L17
+VCG_6i`XJShYegiAGJEcdZ0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 dXobon2Dh>flQW7j[D_KV1
+!i10b 1
+Elcd_example
+Z13 w1467161508
+Z14 DPx4 work 11 vending_rom 0 22 XQA^T:bg`^Ki14Jg0LS>J3
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z16 8C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_example.vhd
+Z17 FC:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_example.vhd
+l0
+L13
+VHZV`bE4bWKa4Oa^bVV1ii2
+R7
+32
+Z18 !s108 1467162169.213000
+Z19 !s90 -reportprogress|300|-work|work_vending|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_example.vhd|
+Z20 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/lcd_example.vhd|
+R11
+R12
+!s100 hdO8j[L9oN^GkZ_7VLmbM3
+!i10b 1
+Abehavior
+R14
+R15
+R2
+R3
+DEx4 work 11 lcd_example 0 22 HZV`bE4bWKa4Oa^bVV1ii2
+l37
+L20
+V8CL_ml855k4jJegD>LohH2
+R7
+32
+R18
+R19
+R20
+R11
+R12
+!s100 0loHO<;mK_>;324kL4MEm1
+!i10b 1
+Escanner
+Z21 w1467058773
+R15
+R2
+R3
+R4
+Z22 8C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/SCANNER.vhd
+Z23 FC:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/SCANNER.vhd
+l0
+L10
+VdBT1`ZmU`;V^G4RX]W6@80
+R7
+32
+Z24 !s108 1467162169.523000
+Z25 !s90 -reportprogress|300|-work|work_vending|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/SCANNER.vhd|
+Z26 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/SCANNER.vhd|
+R11
+R12
+!s100 iLMKfeS`H@VIbPO_:]ohL3
+!i10b 1
+Abehavior
+R15
+R2
+R3
+DEx4 work 7 scanner 0 22 dBT1`ZmU`;V^G4RX]W6@80
+l21
+L16
+V3Al8HVgLDl3GfXOH?8Hz63
+R7
+32
+R24
+R25
+R26
+R11
+R12
+!s100 KK62O5I7`>EQ]FaWB[[Z83
+!i10b 1
+Etest_bench
+Z27 w1467161984
+R2
+R3
+R4
+Z28 8C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/TEST_BENCH.vhd
+Z29 FC:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/TEST_BENCH.vhd
+l0
+L5
+V0T8H]?CB07VLWLRmd3>Gm0
+R7
+32
+Z30 !s108 1467162169.844000
+Z31 !s90 -reportprogress|300|-work|work_vending|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/TEST_BENCH.vhd|
+Z32 !s107 C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/TEST_BENCH.vhd|
+R11
+R12
+!s100 ]?^h8_bOW=FBIhhJE6RN00
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 10 test_bench 0 22 0T8H]?CB07VLWLRmd3>Gm0
+l26
+L7
+V7H`VA7RU1Y1`6@AfWblz03
+!s100 JeIGUF;0DZIH=?1_MzTc_0
+R7
+32
+R30
+R31
+R32
+R11
+R12
+!i10b 1
+Pvending_rom
+R3
+R2
+R15
+w1467161157
+R4
+8C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/vending_rom.vhd
+FC:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/vending_rom.vhd
+l0
+L27
+VXQA^T:bg`^Ki14Jg0LS>J3
+!s100 ;<@OBn_Uh@oKlZ71F1Q4=1
+R7
+32
+!i10b 1
+!s108 1467162170.140000
+!s90 -reportprogress|300|-work|work_vending|-2002|-explicit|C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/vending_rom.vhd|
+!s107 C:/Carlos Perez Araujo/Proyectos Personales/Vending Machine Hardware-based/vending_rom.vhd|
+R11
+R12

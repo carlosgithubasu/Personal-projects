@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachineState/SequenceDetector.xst" -ofn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachineState/SequenceDetector.syr" 
+xst -intstyle ise -ifn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachineState/SequenceDetector.xst" -ofn "C:/Carlos Perez Araujo/Proyectos Personales/Vhdl/MealyMachineState/SequenceDetector.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 "SequenceDetector.ngc" SequenceDetector.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SequenceDetector_map.ncd SequenceDetector.ngd SequenceDetector.pcf 

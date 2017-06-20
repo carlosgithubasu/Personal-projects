@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -6.689
+TNS   : -1052.991
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_50MHz'
+Slack : -3.053
+TNS   : -670.721
+
+Type  : Slow 1200mV 85C Model Setup 'CLK100HZ:CLK100|C100HZ'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_50MHz'
+Slack : -0.206
+TNS   : -0.206
+
+Type  : Slow 1200mV 85C Model Hold 'FQDIVIDER:CLK|TEMPORAL'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK100HZ:CLK100|C100HZ'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50MHz'
+Slack : -3.000
+TNS   : -289.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -1.000
+TNS   : -257.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK100HZ:CLK100|C100HZ'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Slow 1200mV 0C Model Setup 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -5.947
+TNS   : -921.295
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50MHz'
+Slack : -2.678
+TNS   : -581.453
+
+Type  : Slow 1200mV 0C Model Setup 'CLK100HZ:CLK100|C100HZ'
+Slack : 0.064
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50MHz'
+Slack : -0.224
+TNS   : -0.261
+
+Type  : Slow 1200mV 0C Model Hold 'FQDIVIDER:CLK|TEMPORAL'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK100HZ:CLK100|C100HZ'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50MHz'
+Slack : -3.000
+TNS   : -289.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -1.000
+TNS   : -257.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK100HZ:CLK100|C100HZ'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Setup 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -3.333
+TNS   : -497.504
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50MHz'
+Slack : -1.188
+TNS   : -238.770
+
+Type  : Fast 1200mV 0C Model Setup 'CLK100HZ:CLK100|C100HZ'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50MHz'
+Slack : -0.376
+TNS   : -0.553
+
+Type  : Fast 1200mV 0C Model Hold 'FQDIVIDER:CLK|TEMPORAL'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK100HZ:CLK100|C100HZ'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50MHz'
+Slack : -3.000
+TNS   : -379.611
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FQDIVIDER:CLK|TEMPORAL'
+Slack : -1.000
+TNS   : -257.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK100HZ:CLK100|C100HZ'
+Slack : -1.000
+TNS   : -24.000
+
+------------------------------------------------------------

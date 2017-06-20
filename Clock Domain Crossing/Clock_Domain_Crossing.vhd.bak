@@ -1,0 +1,88 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+ 
+ 
+entity Clock_Domain_Crossing is
+  Generic(
+    CLK_COMPARE : integer range 0 to 1 := 0; --if in_clk_A > in_clk_B; 0 else 1;
+    DATA_WIDTH : integer := 8
+ 
+  );
+  Port ( 
+    in_rst : in std_logic;
+    in_clk_A : in std_logic;
+    in_clk_B : in std_logic;
+    in_data_A_vld : in std_logic;
+    in_data_A : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+    out_data_B : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+    out_data_B_vld : out std_logic   
+ 
+  );
+end Clock_Domain_Crossing;
+ 
+architecture Behavioral of Clock_Domain_Crossing is
+ 
+    component cdc_down
+        generic(
+            DATA_WIDTH : integer := 8
+        );
+        Port ( 
+            in_rst : in std_logic;
+            in_clk_A : in std_logic;
+            in_clk_B : in std_logic;
+            in_data_A_vld : in std_logic;
+            in_data_A : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+            out_data_B : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+            out_data_B_vld : out std_logic
+ 
+        );    
+    end component;
+ 
+    component cdc_up
+        generic(
+            DATA_WIDTH : integer := 8
+        );
+        Port ( 
+            in_rst : in std_logic;
+            in_clk_A : in std_logic;
+            in_clk_B : in std_logic;
+            in_data_A_vld : in std_logic;
+            in_data_A : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+            out_data_B : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+            out_data_B_vld : out std_logic            
+        );    
+    end component;
+begin
+ 
+    cdc_down_if : if CLK_COMPARE = 0 generate
+        cdc_down_map : cdc_down 
+        generic map(
+            DATA_WIDTH => DATA_WIDTH
+        )
+        Port map( 
+            in_rst => in_rst,
+            in_clk_A => in_clk_A,
+            in_clk_B => in_clk_B,
+            in_data_A_vld => in_data_A_vld,
+            in_data_A => in_data_A,
+            out_data_B => out_data_B, 
+            out_data_B_vld =>  out_data_B_vld                    
+        );          
+    end generate cdc_down_if;
+    cdc_up_if : if CLK_COMPARE = 1 generate
+        cdc_up_map : cdc_up 
+        generic map(
+            DATA_WIDTH => DATA_WIDTH
+        )
+        Port map( 
+            in_rst => in_rst,
+            in_clk_A => in_clk_A,
+            in_clk_B => in_clk_B,
+            in_data_A_vld => in_data_A_vld,
+            in_data_A => in_data_A,
+            out_data_B => out_data_B, 
+            out_data_B_vld =>  out_data_B_vld                    
+        ); 
+    end generate cdc_up_if;
+ 
+end Behavioral;

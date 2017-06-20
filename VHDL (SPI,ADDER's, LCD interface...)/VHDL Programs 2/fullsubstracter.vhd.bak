@@ -1,0 +1,18 @@
+library ieee;
+use ieee.numeric_bit.all;
+
+entity fullsubstracter is
+	port(A,B,Ci: in bit;
+		  D,B : out bit);
+end fullsubstracter;
+
+architecture equations of full_substracter is
+
+begin
+
+D<= A xor B xor Ci;
+B <= (not A and C) or (not A and B) or (C and B);
+
+end equations;
+
+		  
